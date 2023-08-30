@@ -145,10 +145,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Natural language provides a natural interface for human communication, yet it is challenging for robots to comprehend due to its abstract nature and inherent ambiguity. Large language models (LLMs) contain commonsense knowledge that can help resolve language ambiguity and generate possible solutions to abstract specifications. While LLMs have shown promise as few-shot planning policies, their potential for planning complex tasks is not fully tapped. 
-            This paper shows that LLMs can be used as both the commonsense model of the world and the heuristic policy in search algorithms such as Monte Carlo Tree Search (MCTS). 
+            Real-world environments are often large-scale domains that make classical planning intractable. 
+            Large language models (LLMs) have been used as few-shot planning policies due to their commonsense knowledge for solving daily task-planning problems. However, LLMs' potential for planning complex tasks is not fully tapped. 
+            This paper shows that LLMs can be used as both the commonsense world model and the heuristic policy in search algorithms such as Monte Carlo Tree Search (MCTS). 
             MCTS explores likely world states sampled from LLMs to facilitate better-reasoned decision-making. The commonsense policy from LLMs guides the search to relevant parts of the tree, substantially reducing the search complexity.
-            We demonstrate the effectiveness of our method in daily task-planning experiments and highlight its advantages over using LLMs solely as policies.
+            We demonstrate the effectiveness of our method in daily task-planning experiments and highlight its advantages over using LLMs solely as policies
           </p>
         </div>
       </div>
