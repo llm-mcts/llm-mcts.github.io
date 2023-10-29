@@ -144,11 +144,23 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Real-world environments are often large-scale domains that make classical planning intractable. 
-            Large language models (LLMs) have been used as few-shot planning policies due to their commonsense knowledge for solving daily task-planning problems. However, LLMs' potential for planning complex tasks is not fully tapped. 
-            This paper shows that LLMs can be used as both the commonsense world model and the heuristic policy in search algorithms such as Monte Carlo Tree Search (MCTS). 
-            MCTS explores likely world states sampled from LLMs to facilitate better-reasoned decision-making. The commonsense policy from LLMs guides the search to relevant parts of the tree, substantially reducing the search complexity.
-            We demonstrate the effectiveness of our method in daily task-planning experiments and highlight its advantages over using LLMs solely as policies
+            Large-scale task planning is a major challenge.  Recent work exploits large
+            language models (LLMs) directly as a  <em>policy</em> and shows surprisingly
+            interesting results.  This paper shows that LLMs provide a
+            <em>commonsense model</em> of the world in addition to a policy that acts on
+            it. The world model and the policy can be combined in a search
+            algorithm, such as Monte Carlo Tree Search (MCTS), to scale up task
+            planning.  In our new LLM-MCTS algorithm, the LLM-induced world model
+            provides a commonsense prior belief for MCTS to achieve effective reasoning;
+            the LLM-induced policy acts as a heuristic to guide the search, vastly
+            improving search efficiency. Experiments show that LLM-MCTS outperforms
+            both MCTS alone and policies induced by LLMs (GPT2 and GPT3.5) by a wide
+            margin, for complex, novel tasks. 
+            Further experiments and analyses on multiple tasks---multiplication, multi-hop travel planning, object rearrangement---suggest <em>minimum description length</em> (MDL)
+            as a general guiding principle: if the
+            description length of the world model is substantially smaller than that of  the
+            policy, using LLM as a world model for model-based planning is likely better
+            than using LLM solely as a policy.
           </p>
         </div>
       </div>
